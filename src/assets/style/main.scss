@@ -1,0 +1,100 @@
+@import "@/assets/style/mixins.scss";
+@import "variables.scss";
+@import "null.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+body {
+  background-color: $bgColor;
+  font-family: $font;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.container {
+  @media (max-width: 2559px) {
+    padding: 0 60px;
+  }
+  @media (max-width: 1023px) {
+    padding: 0 32px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 16px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 140px;
+  margin-bottom: 100px;
+  > * {
+    width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.content__text {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(328px, 380px));
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);  
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);  
+  }
+}
+
+
+
+.main__title {
+  text-align: center;
+  word-break: break-all;
+}
+
+.title {
+  text-align: center;
+}
+.text {
+  text-align: center;
+}
+
+.mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.error {
+  align-self: flex-start;
+  border-color: $errorColor !important;
+  color: $errorColor;
+  font-size: 12px;
+  gap: 4px;
+  line-height: 1.17;
+  padding-left: 16px;
+}
