@@ -19,7 +19,7 @@ export default {
     name: 'vHeader',
     data() {
         return {
-            logoURL: 'src/assets/img/Logo.svg',
+            logoURL: './src/assets/img/Logo.svg',
         }
     }
 }

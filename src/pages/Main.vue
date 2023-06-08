@@ -41,7 +41,7 @@ import { getToken, getTokenFromLocalStorage, saveTokenToLocalStorage, removeToke
 export default {
     data() {
         return {
-            mainImage: 'src/assets/img/pexels-alexandr-podvalny-1227513.jpeg',
+            mainImage: './src/assets/img/pexels-alexandr-podvalny-1227513.jpeg',
             users: [],
             maxCountUsers: 0,
             maxCountOfPage: 6,
@@ -59,7 +59,7 @@ export default {
                 phone: '',
                 image: '',
             },
-            successImg: 'src/assets/img/success-image.svg',
+            successImg: './src/assets/img/success-image.svg',
             successReg: false,
         }
     },
