@@ -80,7 +80,6 @@ export default {
                 page: this.currentPage,
                 count: this.maxCountOfPage,
             }
-            await new Promise(resolve => { setTimeout(resolve, 1000) });
             const users = await getUsers(url, paramsUsers);
             this.totalPages = users.data.total_pages;
             this.totalUsers = users.data.total_users;
