@@ -1,3 +1,4 @@
+
 <template>
         <img :src="imageSrc" :alt="altImage"  />
 </template>
@@ -6,7 +7,7 @@
 export default {
     name: 'vImage',
     props: {
-        imageURL: {
+        imageName: {
             type: String,
             default: ''
         },
@@ -17,9 +18,9 @@ export default {
     },
     computed: {
         imageSrc() {
-            return new URL(this.imageURL, import.meta.url).pathname;
+            return new URL(`../assets/img/${this.imageName}`, import.meta.url).pathname;
         }
-    },
+    }
 }
 </script>
 

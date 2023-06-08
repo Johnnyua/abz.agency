@@ -2,7 +2,7 @@
     <v-header></v-header>
     <main class="main">
         <section class="main__heading heading">
-            <v-image class="heading__img" :imageURL="mainImage" :altImage="'Main image'" />
+            <v-image class="heading__img" :imageName="mainImageName" :altImage="'Main image'" />
             <div class="heading__content content container">
                 <div class="content__text text">
                     <v-heading class="text__title title">Test assignment for front-end developer</v-heading>
@@ -40,7 +40,7 @@ import { getToken, getTokenFromLocalStorage, saveTokenToLocalStorage, removeToke
 export default {
     data() {
         return {
-            mainImage: '../assets/img/pexels-alexandr-podvalny-1227513.jpeg',
+            mainImageName: 'pexels-alexandr-podvalny-1227513.jpeg',
             users: [],
             maxCountUsers: 0,
             maxCountOfPage: 6,
@@ -58,7 +58,7 @@ export default {
                 phone: '',
                 image: '',
             },
-            successImg: '../assets/img/success-image.svg',
+            successImg: 'success-image.svg',
             successReg: false,
         }
     },
