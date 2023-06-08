@@ -26,7 +26,7 @@ export default {
     cursor: pointer;
     opacity: 0;
     width: 300px;
-    transform: translate(-60%, -50%);
+    transform: translate(-100%, -50%);
     transition: opacity 1s;
     word-break: break-all;
     word-wrap: break-word;

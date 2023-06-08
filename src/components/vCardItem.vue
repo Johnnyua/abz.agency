@@ -4,13 +4,15 @@
             <v-image v-if="user.photo == ''" :imageName="userCoverName" alt="'User photo'"></v-image>
             <v-image v-else :src="user.photo" :alt="'User photo'"></v-image>
         </div>
-        <v-text class="card__title">{{ user.name }}
-        <v-tool-tip class="card__item__tooltip" :text="user.name"></v-tool-tip>
-        </v-text>
+        <h3 class="card__title">
+            {{ user.name }}
+            <v-tool-tip class="card__item__tooltip" :text="user.name" />
+        </h3>
         <div class="card__text text">
             <v-text class="text__position">{{ user.position }}</v-text>
-            <v-text class="text__email">{{ user.email }}
-            <v-tool-tip class="card__item__tooltip" :text="user.email"></v-tool-tip>
+            <v-text class="text__email">
+                {{ user.email }}
+                <v-tool-tip class="card__item__tooltip" :text="user.email"></v-tool-tip>
             </v-text>
             <v-text class="text__phone">{{ user.phone }}</v-text>
         </div>
@@ -58,12 +60,13 @@ export default {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .card__title:hover,
 .text__email:hover {
     .card__item__tooltip {
-        transform: translate(-60%,70%);
+        transform: translate(-100%, -50%);
         opacity: 1;
     }
 }
@@ -82,7 +85,4 @@ export default {
         border-radius: 50%;
     }
 }
-
-
-
 </style>
