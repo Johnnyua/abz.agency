@@ -1,8 +1,8 @@
 <template>
     <li class="card__item" @mouseover.stop="showToolTip">
         <div class="card__img">
-            <img v-if="user.photo == ''" src="@/assets/img/photo-cover.svg" alt="User photo">
-            <img v-else :src="user.photo" alt="User photo">
+            <v-image v-if="user.photo == ''" :src="'../assets/img/photo-cover.svg'" alt="'User photo'"></v-image>
+            <v-image v-else :src="user.photo" :alt="'User photo'"></v-image>
         </div>
         <v-text class="card__title">{{ user.name }}
         <v-tool-tip class="card__item__tooltip" :text="user.name"></v-tool-tip>

@@ -1,5 +1,5 @@
 <template>
-        <img :src="imageURL" :alt="altImage"  />
+        <img :src="imageSrc" :alt="altImage"  />
 </template>
 
 <script>
@@ -14,6 +14,11 @@ export default {
             type: String,
             default: 'Image'
         },
+    },
+    computed: {
+        imageSrc() {
+            return new URL(this.imageURL, import.meta.url).href;
+        }
     },
 }
 </script>
