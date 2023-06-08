@@ -17,7 +17,7 @@ export default {
     },
     computed: {
         imageSrc() {
-            return new URL(this.imageURL, import.meta.url).href;
+            return new URL(this.imageURL, import.meta.url).pathname;
         }
     },
 }

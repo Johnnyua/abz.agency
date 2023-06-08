@@ -2,7 +2,7 @@
     <div class="header container">
         <div class="header__logo">
             <v-image 
-                :src="logoURL"
+                :imageURL="logoURL"
                 :altImage="'Logo'"
                 @click="$router.push('/')"
             />
@@ -19,7 +19,7 @@ export default {
     name: 'vHeader',
     data() {
         return {
-            logoURL: 'src/assets/img/Logo.svg',
+            logoURL: '../assets/img/Logo.svg',
         }
     }
 }

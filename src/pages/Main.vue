@@ -1,38 +1,37 @@
 <template>
-        <v-header></v-header>
-        <main class="main">
-            <section class="main__heading heading">
-                <v-image class="heading__img" :imageURL="mainImage" :altImage="'Main image'" />
-                <div class="heading__content content container">
-                    <div class="content__text text">
-                        <v-heading class="text__title title">Test assignment for front-end developer</v-heading>
-                        <v-text class="text__text">
-                            What defines a good front-end developer is one that has skilled knowledge of HTML, CSS, JS with
-                            a vast understanding of User design thinking as they'll be building web interfaces with
-                            accessibility in mind. They should also be excited to learn, as the world of Front-End
-                            Development keeps evolving.
-                        </v-text>
-                    </div>
-                    <div class="content__btn">
-                        <v-button>Sing up</v-button>
-                    </div>
+    <v-header></v-header>
+    <main class="main">
+        <section class="main__heading heading">
+            <v-image class="heading__img" :imageURL="mainImage" :altImage="'Main image'" />
+            <div class="heading__content content container">
+                <div class="content__text text">
+                    <v-heading class="text__title title">Test assignment for front-end developer</v-heading>
+                    <v-text class="text__text">
+                        What defines a good front-end developer is one that has skilled knowledge of HTML, CSS, JS with
+                        a vast understanding of User design thinking as they'll be building web interfaces with
+                        accessibility in mind. They should also be excited to learn, as the world of Front-End
+                        Development keeps evolving.
+                    </v-text>
                 </div>
-            </section>
-            <section class="main__cards content container">
-                <v-heading class="content__title title">Working with GET request</v-heading>
-                <v-cards :users="sortedUsers"></v-cards>
-                <v-loader v-show="isLoading"></v-loader>
-                <div class="content__btn" v-show="currentPage !== totalPages">
-                    <v-button @click="showMoreUsers">Show more</v-button>
+                <div class="content__btn">
+                    <v-button>Sing up</v-button>
                 </div>
-            </section>
-            <section class="main__form content container">
-                <v-heading class="form__title main__title">Working with <br class="mobile"> POST request</v-heading>
-                <v-form v-show="!successReg" :radioValues="positions" :error="errorForm" @submitForm="addUser"></v-form>
-                <v-image v-show="successReg" :imageURL="successImg"
-                    :altImage="'User is registration successfully'"></v-image>
-            </section>
-        </main>
+            </div>
+        </section>
+        <section class="main__cards content container">
+            <v-heading class="content__title title">Working with GET request</v-heading>
+            <v-cards :users="sortedUsers"></v-cards>
+            <v-loader v-show="isLoading"></v-loader>
+            <div class="content__btn" v-show="currentPage !== totalPages">
+                <v-button @click="showMoreUsers">Show more</v-button>
+            </div>
+        </section>
+        <section class="main__form content container">
+            <v-heading class="form__title main__title">Working with <br class="mobile"> POST request</v-heading>
+            <v-form v-show="!successReg" :radioValues="positions" :error="errorForm" @submitForm="addUser"></v-form>
+            <v-image v-show="successReg" :imageURL="successImg" :altImage="'User is registration successfully'"></v-image>
+        </section>
+    </main>
 </template>
 
 <script>
